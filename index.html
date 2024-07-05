@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML基本标签</title>
+    <style>
+        .label_div{
+            background-color: #ebebebdc;
+        }
+        .dark{
+            background-color: #101010f0;
+            color:lightcyan;
+            width: 500px;
+            font-size: 15px;
+        }
+        .highlight{
+            font-weight: bold;
+            background-color: lightgreen;
+            color: black;
+        }
+        .attr{
+            font-style: italic;
+            font-weight: bolder;
+            color: blue;
+        }
+        .hnys{
+            vertical-align: top;
+            text-align: left;
+        }
+        .title{
+            font-weight: bold;
+            color:seagreen;
+        }
+        .label{
+            font-weight: bold;
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML文档的基本结构</h1>
+    <p>
+        <b>HTML</b>（HyperText Markup Language，超文本标记语言）是用于创建网页的标准标记语言。<br>
+        它不是一种编程语言，而是一种标记语言（markup language），用于描述网页的结构和内容。<br>
+        HTML文档是由HTML元素组成的，这些元素由标签（tags）、属性和元素内容等组成。
+    </p>
+    <ol>HTML文档的基本结构通常包括以下几个部分：
+        <li>&lt;!DOCTYPE html&gt;：声明文档类型和版本。</li>
+        <li>&lt;html>：html标签是HTML页面的根元素。</li>
+        <li>&lt;head>：包含了所有的头部标签元素。如&lt;title>（定义网页标题）、&lt;style>（定义内部样式表）、&lt;meta>（提供有关HTML文档的元信息）、&lt;link>（定义文档与外部资源之间的关系）、&lt;script>（定义客户端脚本，比如JavaScript）等。</li>
+        <li>&lt;body>：包含了所有的主体内容，如文本、图片、音频、视频、超链接、表格、列表等。</li>
+
+    </ol>
+    <p>&lt;!DOCTYPE html&gt;用于声明文档类型和版本</p>
+
+    <h1>HTML常用标签</h1>
+    <h1>这是1级标题</h1>
+    <h2>这是2级标题</h2>
+    <h3>这是3级标题</h3>
+    <h4>这是4级标题</h4>
+    <h5>这是5级标题</h5>
+    <h6>这是6级标题</h6>
+    <h2>文本&样式标签</h2>
+    <p>段落文本用&lt;P>表示</p><p>段落文本独占一行</p>
+    <p>文本样式标签会修改包裹的文本样式，比如
+        <b>&lt;b>是加粗</b>、
+        <i>&lt;i>是斜体</i>、
+        <sub>&lt;sub>是变成下标</sub>、
+        <del>&lt;del>是删除线</del>、
+        <br>&lt;br>是换行
+        现在已不建议使用文本样式标签，而可以改用CSS属性实现
+    </p>
+    <h2>列表标签</h2>
+    <h3>&lt;ul>是无序列表</h3>
+    <ul>
+        <li>&lt;li>表示列表项，这是列表项1</li>
+        <li>这是列表项2</li>
+    </ul>
+    <h3>&lt;lo>是有序列表</h3>
+    <ol>
+        <li>仍然是&lt;li>表示列表项</li>
+        <li>只是列表项拥有了序号</li>
+        <li>&lt;-这是列表项3</li>
+    </ol>
+    <h2>超链接</h2>
+    <a href="https://www.baidu.com">超链接用&lt;a>表示,元素属性 <b><i>href</i></b> 指向链接地址</a>
+    <h2>图片标签</h2>
+    <img src="https://i0.hdslb.com/bfs/static/jinkela/space/asserts/icon-auth.png" alt="bilibili认证图标" title="获得 bilibili 认证，享受多重认证福利！">
+    <p>图片标签使用&lt;img/>标签,其中<br>
+        <ul>
+            <li><span class="attr">alt</span>: 替换文本， 当文本不能正确显示的时候，会显示alt替换的文本</li>
+            <li><span class="attr">title</span>: 提示文本，鼠标悬停放到图片上，就会有提示文字</li>
+            <li><span class="attr">width/height</span>: 控制宽度高度，等比缩放高度和宽度一般改一个即可</li>
+            <li><span class="attr">border</span>: 边框宽度(像素),但是一般使用 CSS 设定</li>
+        </ul>
+    </p>
+    <h2>多媒体标签</h2>
+    <p>视频、音频标签的用法与图片标签&lt;img/>用法类似<br>
+        &lt;video>、&lt;audio>分别是视频、音频媒体标签， <br>
+        他们都使用<span class="attr">controls</span>属性显示控制<br>
+    </p>
+    <video src="./video.mp4" controls></video>
+    <audio src="" controls></audio>
+    <div class="label_div">
+        <h2>&lt;div>标签</h2>
+        <p>
+            &lt;div>标签是一个容器标签，主要用于将文档分割为独立的、不同的部分;<br>
+            它本身没有特定的语义含义、没有默认的样式，通常与 CSS 结合使用来对页面布局进行划分和控制;<br>
+            &lt;div>标签可以嵌套其他&lt;div>标签或任何块级元素;<br>
+            例如在这个块中，div被设置为class="label_div"，所有包裹在其中的背景颜色都被设置为#ebebebdc
+        </p>
+    </div>
+    <div>
+        <h2>&lt;span>标签</h2>
+        <p>
+            &lt;span> 标签在 HTML 中是一个行内元素（inline element）， <br>
+            它经常被用来对文本中的一部分应用样式或者作为其他行内元素的容器。 <br>
+            &lt;span> 标签本身并不表示任何特定的内容或格式， <br>
+            而是通过与 CSS 样式或其他属性结合使用，来提供对文本或其他行内内容的样式控制。<br>
+            比如这是一段普通的文本，但其中 <span class="highlight">这部分文本</span> 是特殊的。
+        </p>
+        
+    </div>
+    <div>
+        <h2>布局标签</h2>
+        <p>HTML5中对div标签换名后赋予这些块特殊含义而得到具有意义的布局标签</p>
+        <ul>
+            <li>头部信息:&lt;header></li>
+            <li>导航栏:&lt;nav></li>
+            <li>侧边栏:&lt;aside></li>
+            <li>内容区域:&lt;main></li>
+            <li>底部信息:&lt;footer></li>
+            <li>文章详情:&lt;article></li>
+            <li>页面分区:&lt;section></li>
+        </ul>
+    </div>
+    <div>
+        <h2>&lt;code>行内代码</h2>
+        <p>例如:在JavaScript中可以使用<code>forEach()</code>函数对数组进行遍历</p>
+        <h2>&lt;pre>保留格式标签</h2>
+        <p>标签用于表示预格式化的文本。 <br>
+            它保留了文本中的空格和换行符，通常用于显示计算机代码或机器生成的文本， <br>
+            因为这些文本通常包含大量的空格和换行符，并且这些格式是重要的。
+        </p>
+        <pre>
+<code>
+<div class="dark">
+1   main.cpp:
+2   #include "stdio.h"
+3
+4   void main(){
+5       printf("Hello World!");
+6       return;
+7   }
+8   <span style="color: greenyellow;">//这是一个HelloWorld程序</span>
+</div>
+</code>
+        </pre>
+        <h2>&lt;samp>程序输出的样本文本</h2>
+        <p>
+            &lt;samp> 标签在 HTML 中用于表示计算机程序输出的样本文本。 <br>
+            这通常用于表示由计算机程序产生的命令、代码、键盘输入、输出到终端的文本等内容。 <br>
+            &lt;samp> 标签中的内容通常显示为等宽字体（固定宽度字体），以便更准确地表示文本内容。
+            例如: <br>
+            在命令行中输入以下命令：
+        </p>
+<pre>
+<samp class="dark">ls -l</samp>
+<p>输出可能是：</p>
+<samp class="dark">
+total 16
+-rw-r--r--  1 user group 1234 Jan 23 20:34 file1.txt
+-rw-r--r--  1 user group  567 Jan 23 20:35 file2.txt
+</samp>
+</pre>
+    </div>
+    <div>
+        <h2>&lt;table>表格标签</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>职业</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>张三</td>
+                    <td>30</td>
+                    <td>工程师</td>
+                </tr>
+                <tr>
+                    <td>李四</td>
+                    <td>25</td>
+                    <td>设计师</td>
+                </tr>
+                <tr>
+                    <td>王五</td>
+                    <td>35</td>
+                    <td>医生</td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li>&lt;table>元素定义了表格。border属性用于给表格添加边框（在现代网页设计中通常使用CSS来定义表格的样式）</li>
+            <li>&lt;thead>元素包含了表格的表头部分，虽然&lt;thead>不是必需的，但它为表格的结构提供了语义上的意义</li>
+            <li>&lt;tr>元素定义了表格的行</li>
+            <li>&lt;th>元素定义了表头单元格，通常包含粗体居中的文本。默认文本居中，也可以使用CSS来修改</li>
+            <li>&lt;tbody>元素包含了除表头以外的表格的主体部分。&lt;tbody>也不是必需的，但同样为表格的结构提供语义意义</li>
+            <li>&lt;td>元素定义了表格数据单元格，通常包含普通的文本</li>
+        </ul>
+        <p>在HTML5中，&lt;th>和&lt;td>元素也可以包含其他HTML元素，比如链接、图片等。</p>
+    </div>
+    <div>
+        <h2>行内元素</h2>
+        <p>
+            HTML中的行内元素（也称为内联元素、内嵌元素或直进式元素） <br>
+            HTML5中的一些元素具有灵活的显示特性，可以通过CSS样式调整其显示方式， <br>
+            比如将行内元素设置为块级元素或将块级元素设置为行内元素。 <br>
+            这通常是通过修改元素的display属性来实现的， <br>
+            例如<span class="attr">display: inline;</span>或<span class="attr">display: block;</span><br>
+            常见行内元素主要包括以下这些:</p>
+        <table>
+            <tr class="hnys">
+                <td>
+                    <ol><span style="font-weight: bolder;">文本相关的元素：</span>
+                        <li>&lt;a> ：超链接</li>
+                        <li>&lt;b> ：粗体</li>
+                        <li>&lt;i> ：斜体</li>
+                        <li>&lt;u> ：下划线</li>
+                        <li>&lt;strong> ：强调，通常为粗体</li>
+                        <li>&lt;em> ：强调，通常为斜体</li>
+                        <li>&lt;span> ：通用内联容器</li>
+                        <li>&lt;br> ：换行符</li>
+                    </ol>
+                </td>
+                <td>
+                    <ol><span style="font-weight: bolder;">表单相关的元素：</span>
+                        <li>&lt;input> ：输入字段</li>
+                        <li>&lt;label> ：表单字段标签</li>
+                        <li>&lt;button> ：按钮</li>
+                        <li>&lt;textarea> ：多行文本输入框</li>
+                        <li>&lt;select> ：下拉选择框</li>
+                    </ol>
+                </td>
+                <td>
+                    <ol><span style="font-weight: bolder;">图像和多媒体：</span>
+                        <li>&lt;img> ：图片</li>
+                        <li>&lt;video> ：视频</li>
+                        <li>&lt;audio> ：音频</li>
+                    </ol>
+                </td>
+                <td>
+                    <ol><span style="font-weight: bolder;">其他：</span>
+                        <li>&lt;sub> ：下标文本</li>
+                        <li>&lt;sup> ：上标文本</li>
+                        <li>&lt;code> ：计算机代码</li>
+                        <li>&lt;var> ：定义变量</li>
+                        <li>&lt;samp> ：定义程序样本输出</li>
+                        <li>&lt;kbd> ：定义键盘输入</li>
+                        <li>&lt;cite> ：引用文本</li>
+                        <li>&lt;q> ：短引用</li>
+                    </ol>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <h2>表单元素</h2>
+        <ol>
+            <li>
+                <span class="title">&lt;form>标签</span>
+                <p>
+                    &lt;form> 元素用于创建HTML表单以收集用户输入。<br>
+                    &lt;form> 元素可以包含各种表单控件，如文本字段、复选框、单选按钮、提交按钮等。 <br>
+                    表单还可以包含<span>&lt;input>、&lt;textarea>、&lt;button>、&lt;select> 和 &lt;option></span>等元素。
+                </p>
+            </li>
+            <li>
+                <span class="title">&lt;input>标签</span>
+                <p>
+                    &lt;input> 元素用于创建输入字段，如文本字段、密码字段、单选按钮、复选框等。<br>
+                    &lt;input> 元素的 type 属性决定了输入字段的类型。<br>
+                    <table border="1">例:
+                        <tr>
+                            <td width="250">
+                                <form>
+                                    <label for="fname">名字:</label><br>
+                                    <input type="text" id="fname" name="fname"><br>
+                                    <label for="fpassword">密码:</label><br>
+                                    <input type="password" id="fpassword" name="fpassword"><br>
+                                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                                    <label for="vehicle1"> 我有一辆自行车</label><br>
+                                    <input type="radio" id="genderMale" name="gender" value="male">
+                                    <label for="genderMale">男</label><br>
+                                  </form>
+                            </td><td class="dark">
+                                <pre>
+<code>
+&lt;form>
+    &lt;label for="fname">名字:&lt;/label>&lt;br>
+    &lt;input type="text" id="fname" name="fname">&lt;br>
+    &lt;label for="fpassword">密码:&lt;/label>&lt;br>
+    &lt;input type="password" id="fpassword" name="fpassword">&lt;br>
+    &lt;input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+    &lt;label for="vehicle1"> 我有一辆自行车&lt;/label>&lt;br>
+    &lt;input type="radio" id="genderMale" name="gender" value="male">
+    &lt;label for="genderMale">男&lt;/label>&lt;br>
+&lt;/form>
+</code>
+                                </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </p>
+            </li>
+            <li>
+                <span class="title">&lt;textarea>标签</span>
+                <p>
+                    &lt;textarea> 元素用于创建多行文本字段，用户可以输入多行文本。<br>
+                    <table border="1">例:
+                        <tr>
+                            <td>
+                                <form>
+                                    <label for="message">留言:</label><br>
+                                    <textarea id="message" name="message" rows="4" cols="20"></textarea><br>
+                                </form>
+                            </td><td width="250" class="dark">
+                                <pre>
+<code>
+&lt;form>
+    &lt;label for="message">留言:&lt;/label>&lt;br>
+    &lt;textarea id="message" name="message" rows="4" cols="50">&lt;/textarea>&lt;br>
+&lt;/form>
+</code>
+                                </pre>
+                                
+                            </td>
+                        </tr>
+                    </table>
+                </p>
+            </li>
+            <li>
+                <span class="title">&lt;button>标签</span>
+                <p>
+                    &lt;button> 元素用于在表单中创建点击按钮。 <br>
+                    它可以被用来提交表单、重置表单内容或执行其他JavaScript代码。
+                    <table border="1">例:
+                        <tr>
+                            <td width="250">
+                                <form>
+                                    <button type="submit">提交</button>
+                                    <button type="reset">重置</button>
+                                  </form>
+                            </td><td class="dark">
+                                <pre>
+<code class="">
+&lt;form>
+    &lt;button type="submit">提交</button>
+    &lt;button type="reset">重置</button>
+&lt;/form>
+</code>
+                                </pre>
+                                
+                            </td>
+                        </tr>
+                    </table>
+                </p>
+            </li>
+            <li>
+                <span class="title">&lt;select>和&lt;option>标签</span>
+                <p>
+                    &lt;select> 元素用于创建下拉列表，&lt;option> 元素用于定义列表中的选项。
+                    <table border="1">例:
+                        <tr>
+                            <td width="250">
+                                <form>
+                                    <label for="cars">选择一辆车:</label>
+                                    <select id="cars" name="cars">
+                                      <option value="volvo">Volvo</option>
+                                      <option value="saab">Saab</option>
+                                      <option value="mercedes">Mercedes</option>
+                                      <option value="audi">Audi</option>
+                                    </select><br>
+                                  </form>
+                            </td><td class="dark">
+                                <pre>
+<code>
+&lt;form>
+    &lt;label for="cars">选择一辆车:&lt;/label>
+    &lt;select id="cars" name="cars">
+        &lt;option value="volvo">Volvo&lt;/option>
+        &lt;option value="saab">Saab&lt;/option>
+        &lt;option value="mercedes">Mercedes&lt;/option>
+        &lt;option value="audi">Audi&lt;/option>
+    &lt;/select>
+&lt;/form>
+</code>
+                                </pre>
+                                
+                            </td>
+                        </tr>
+                    </table>
+                </p>
+            </li>
+            <li>
+                <span class="title">&lt;label>标签</span>
+                <p>
+                    &lt;label> 元素为 &lt;input> 元素定义标签（描述）。<br>
+                    &lt;label> 元素的 for 属性应与 &lt;input> 元素的 id 属性匹配。
+                </p>
+            </li>
+            <li>
+                <span class="title">form元素的 action 和 method 属性</span>
+                <p>
+                    action 属性定义了表单数据提交时将发送到的URL。 <br>
+                    method 属性定义了用于发送表单数据的HTTP方法（通常是"get"或"post"）。
+                </p>
+            </li>
+            <li>
+                <span class="title">表单验证</span>
+                <p>
+                    HTML5 引入了一些新的输入类型，如 email、url、number、date 等， <br>
+                    它们可以帮助浏览器自动验证用户输入的数据。 <br>
+                    此外，还可以使用 required 属性来强制用户填写某些字段。                
+                </p>
+            </li>
+        </ol>
+    </div>
+</body>
